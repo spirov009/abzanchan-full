@@ -5,7 +5,7 @@ import { Card, CardContent } from "./components/ui/card";
 import { Input } from "./components/ui/input";
 import { Textarea } from "./components/ui/textarea";
 import { ToggleGroup, ToggleGroupItem } from "./components/ui/toggle-group";
-import { Globe, Instagram, MessageCircle, PhoneCall, ShoppingCart, Image as ImageIcon, ArrowRight, Star, MapPin, HelpCircle, Wallet, Mail, UserHeart, Pencil } from "lucide-react";
+import { Globe, Instagram, MessageCircle, PhoneCall, ShoppingCart, Image as ImageIcon, ArrowRight, Star, MapPin, HelpCircle, Wallet, Mail, Heart, Pencil } from "lucide-react";
 
 export default function AbzanChanLanding() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -44,6 +44,7 @@ export default function AbzanChanLanding() {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     try {
+      // Mock sending email (replace with real backend)
       console.log("Subscribed:", email);
       setEmail("");
       setStatus("success");
@@ -55,6 +56,7 @@ export default function AbzanChanLanding() {
   const handleFeedback = async (e) => {
     e.preventDefault();
     try {
+      // Mock sending feedback (replace with real backend)
       console.log("Feedback:", feedback);
       setFeedback("");
       setStatus("success");
@@ -68,7 +70,7 @@ export default function AbzanChanLanding() {
       {/* About Section */}
       <section className="mt-16">
         <h2 className="text-center text-2xl font-semibold mb-4 flex items-center justify-center gap-2">
-          <UserHeart className="w-5 h-5" /> {t[lang].about}
+          <Heart className="w-5 h-5" /> {t[lang].about}
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto">{t[lang].aboutText}</p>
       </section>
